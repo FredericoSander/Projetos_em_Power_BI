@@ -9,7 +9,7 @@ Contribuições sempre serão bem vindas!
 
 | Programa |Desafio |
 |----------|--------|
-|BootCamp Power BI Analyst|[Criando um relatório de vendas elegante com Power BI.](https://github.com/FredericoSander/Power-BI/tree/main/Criando%20um%20relat%C3%B3rio%20de%20vendas%20elegante)|
+|Power BI Analyst|[Criando um relatório de vendas elegante com Power BI.](https://github.com/FredericoSander/Power-BI/tree/main/Criando%20um%20relat%C3%B3rio%20de%20vendas%20elegante)|
 |Python Data Analytics|[Processando e transformando dados com Power BI](https://github.com/FredericoSander/Power-BI/tree/main/Processando%20e%20Transformando%20Dados)|
 |Data Analytics com Power Bi|[Analisando dados de um Dashboard de vendas no Power BI]()|I
 |Data Analytics com Power Bi|[Dashboard de vendas com Power BI utilizando Star Schema]()|I
