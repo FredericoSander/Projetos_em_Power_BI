@@ -70,7 +70,7 @@ Para construir a tabela D_Product_Details, foi realizada a duplicação da tabel
 
 - Imagem da tabela D_Product_Details
 <div aling="center">
- <img src="">
+ <img src="https://github.com/FredericoSander/Power-BI/blob/main/Modelando%20um%20Dashboard%20de%20E-comerce%20com%20Power%20BI%20Utilizando%20DAX/Imagens/D_Product_Details.png">
 </div>
 
 **Construção da tabela Discounts:**
