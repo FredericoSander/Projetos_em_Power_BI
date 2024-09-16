@@ -31,7 +31,7 @@ Tabela Financial
 
  **Tabelas Fatos**: Nessas tabelas são armazenados os eventos ou observações que podem ser ordens de vendas, saldos de ações, taxas de câmbio, temperaturas, etc. Uma tabela fatocontém colunas chave de dimensão que são relacionadas as tabelas de dimensões e colunas de medidas númericas. As colunas de chave de dimensão, determinam a dimensionalidade de uma tabela de fatos, enquanto os valores de chave de dimensão determinam a granularidade da tabela fatos. As tabelas fatos diferentemente das tabela de dimensão, possuem um número relativamente grande de linhas que crescem ao longo do tempo.
 
-A construção do modelo Star Schema baseou-se na tabela Financial Sample. Durante a criação do modelo, a tabela Financial Sample foi duplicada para dar origem a 3 tabelas dimensão e uma tabela fato. As tabela dimensão criadas foram D_Product, D_Product_Details, D-Discounts, já a tabela fato criada foi a F_Sales. Além das tabelas dimenssão e fatos criadas a partir da Financial Sample foi criada a tabela dimensão dCalendar utilizando fórmulas DAX.
+A construção do modelo Star Schema baseou-se na tabela Financial Sample. Durante a criação do modelo, a tabela Financial Sample foi duplicada para dar origem a 3 tabelas dimensão e uma tabela fato. As tabelas de dimensão criadas foram D_Product, D_Product_Details, D-Discounts, já a tabela fato criada foi a F_Sales. Além das tabelas dimensão e fatos criadas a partir da Financial Sample foi criada a tabela dimensão dCalendar utilizando fórmulas DAX.
 
 ## Construção das tabelas
 
