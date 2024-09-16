@@ -21,7 +21,7 @@ A tabela [Financial Sample](https://github.com/FredericoSander/Power-BI/blob/mai
 Tabela Financial
 <div aling="center">
  <img src="https://github.com/FredericoSander/Power-BI/blob/main/Modelando%20um%20Dashboard%20de%20E-comerce%20com%20Power%20BI%20Utilizando%20DAX/Imagens/Finacial%20Sample.png">
-</div>>
+</div>
 
 ## Modelo Star Schema 
 
@@ -35,7 +35,7 @@ A construção do modelo Star Schema baseou-se na tabela Financial Sample. Duran
 
 ## Construção das tabelas
 
-- **Construção da tabela D-Product:**
+- **Construção da tabela D_Product:**
 
 Para construir a tabela D_Product, foi realizada a duplicação da tabela Financial. 
 - Em seguida, foi realizada da remoção de todas as colunas exceto "Product", "Units Sold", "Manufacturing Price", "Sale Price", este procedimento foi realizado utilizando o comando  remover outras colunas. 
@@ -43,7 +43,7 @@ Para construir a tabela D_Product, foi realizada a duplicação da tabela Financ
 
 - Imagem da tela de criação das colunas agrupadas.
 <div aling="center">
- <img src="">
+ <img src="https://github.com/FredericoSander/Power-BI/blob/main/Modelando%20um%20Dashboard%20de%20E-comerce%20com%20Power%20BI%20Utilizando%20DAX/Imagens/Agrupar%20D_Product.png">
 </div>
 
 - Na sequencia foi criada a coluna índice, por meio da opção Coluna de Índice na guia Adicionar Coluna.
@@ -51,7 +51,7 @@ Para construir a tabela D_Product, foi realizada a duplicação da tabela Financ
 
 - Imagem da tabela D_Product
 <div aling="center">
- <img src="">
+ <img src="https://github.com/FredericoSander/Power-BI/blob/main/Modelando%20um%20Dashboard%20de%20E-comerce%20com%20Power%20BI%20Utilizando%20DAX/Imagens/D_product.png">
 </div>
 
  **Construção da tabela D_Products_Details:**
@@ -63,7 +63,7 @@ Para construir a tabela D_Product_Details, foi realizada a duplicação da tabel
 
 - Imagem da tela de criação das colunas agrupadas.
 <div aling="center">
- <img src="">
+ <img src="https://github.com/FredericoSander/Power-BI/blob/main/Modelando%20um%20Dashboard%20de%20E-comerce%20com%20Power%20BI%20Utilizando%20DAX/Imagens/Coluna%20Condicional%20D_Product_Details.png">
 </div>
 
 - O ultimo passo executado na criação da tabela, foi a exclusão das colunas Segment, Country, Product, Gross Sales, Discounts, Sales, COGS, Profit, Date, Month Number, Month Name, Year, que não são necessarias a esta dimenssão.
@@ -82,7 +82,7 @@ Para construir a tabela D_Discounts, foi realizada a duplicação da tabela Fina
 
 - Imagem da tabela D_Discount
 <div aling="center">
- <img src="">
+ <img src="https://github.com/FredericoSander/Power-BI/blob/main/Modelando%20um%20Dashboard%20de%20E-comerce%20com%20Power%20BI%20Utilizando%20DAX/Imagens/D_Discount.png">
 </div>
 
 **Construção da tabela D_Calendar:**
@@ -99,7 +99,7 @@ Para construir a tabela D_Discounts, foi realizada a duplicação da tabela Fina
 
 - Imagem da tabela D_Calendar
 <div aling="center">
- <img src="">
+ <img src="https://github.com/FredericoSander/Power-BI/blob/main/Modelando%20um%20Dashboard%20de%20E-comerce%20com%20Power%20BI%20Utilizando%20DAX/Imagens/D_Calendar.png">
 </div>
 
 ## Criação do modelo
@@ -114,8 +114,8 @@ A tabela D_Product foi relacionada com a tabela F-Sales por meio do campo Produc
 
 Modelo Star Schema desenvolvido.
 <div aling="center">
- <img src="">
-</div>>
+ <img src="https://github.com/FredericoSander/Power-BI/blob/main/Modelando%20um%20Dashboard%20de%20E-comerce%20com%20Power%20BI%20Utilizando%20DAX/Imagens/Star%20Schema.png">
+</div>
 
 
 ## Autor
