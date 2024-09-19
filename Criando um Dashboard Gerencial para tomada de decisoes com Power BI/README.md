@@ -15,4 +15,4 @@ O relatório deve ser revisado a atender os objetivos a seguir.
 - Criação de menus de navegabilidade em cada pagina.
 - O relatório deverá ter 3 páginas
 
-O relatório encontra-se disponível para interação por meio do link [Criando um Dashboad Gerencial para tomada de decisões com Power BI.](hhttps://app.powerbi.com/view?r=eyJrIjoiMWQwMmI5NDctZGNhNC00MDcxLWFjM2MtZGM2YzgwNDc1Y2RkIiwidCI6IjMxMTU3MGI0LTFhYmMtNGRmZS05NjgzLTFlNGQ4ZDZmOGExNiJ9&pageName=ReportSection)
+O relatório encontra-se disponível para interação por meio do link [Criando um Dashboad Gerencial para tomada de decisões com Power BI.](https://app.powerbi.com/view?r=eyJrIjoiMWQwMmI5NDctZGNhNC00MDcxLWFjM2MtZGM2YzgwNDc1Y2RkIiwidCI6IjMxMTU3MGI0LTFhYmMtNGRmZS05NjgzLTFlNGQ4ZDZmOGExNiJ9&pageName=ReportSection)
