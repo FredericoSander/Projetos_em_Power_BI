@@ -1,97 +1,84 @@
-# Criando um relatório de venda elegante com Power BI
+# Criando um Modelo Star Schema 
+# Descrição do projeto
 
-Neste desafio de projeto, foi criado um relatório em Power Bi com 3 páginas para apresentar os resultados das vendas de uma empresa fictícia realizadas entre setembro de 2013 e dezembro de 2014. Nesta base de dados, são apresentadas as seguintes informações:
-- Segmento de vendas.
-- País das vendas.
-- Produto vendido.
-- Faixa de desconto.
-- Unidades vendidas.
-- Preço de fabricação.
-- Preço de venda.
-- Vendas brutas.
-- Valor do desconto.
-- Valor das vendas.
-- Custo dos produtos vendidos.
-- Lucro e data da vendas.
+Este desafio de projeto teve como objetivo o desenvolver habilidades de criação de modelos Star Schema, essenciais para melhorar o desempenho no Power Bi. O Power BI oferece uma performance otimizada ao trabalhar com dados modelados neste formato. Para a criação do modelo Star Schema, foi fornecido um modelo de banco de dados relacional para servir de referência para adequações necessarias a estrutura final.
 
-Por meio destes dados forma elaborado 3 paineis para apresentação de análise para tomada de decisão. O relatório encontra-se disponível para interação por meio do link [Criando um relatório de venda elegante com Power BI.](https://bit.ly/DesafiodeProjetoDIO)
+## Modelo relacional
 
-No desenvolvimento do projeto foi solicitado o atendimento aos seguinte requisitos.
-- Manter a estrutura definida.
-- Implementar os botões de navegação que fornecem navegabilidade.
-- Utilizar segmentadores com imagnes associadas.
-- Utilizar os indicadores e botões para selecionar diferentes visuais sobre o mesmo assunto.
-- Criar a segunda página do relatório.
-- Publicar o relatório no Power Bi Service.
-- Possibilidade de criação de outros elementos e artifícios conforme familiaridade.
-- Entregar projeto via link do GitHub.
+ O **modelo de dados relacional** é amplamente utilizado na atualidade, sendo um dos mais populares dentre os diversos modelos existentes. Ele oferece uma maneira intuitiva e direta de representar os dados em tabelas. Em um modelo relacional cada linha em uma tabela é um registro com uma ID exclusiva (Chave Primária). As tabela, por sua vez, são compostas por colunas  que armazenam os atributos dos dados persistidos.
+ O modelo de relacional é empregado por organizaões de diversos portes e segmentos, atendendo a uma vasta gama de aplicações, desde o controle de vendas diarias de grandes redes até a gestão de processos operacionais de produção. Os banco de dados relacionais ideais para cenários em que os dados precisam se relacionar e ser gerenciados de forma segura e consistente, com base em regras definidas.
 
-
-## Painel 1 - Sales Report
-
-O painel Sales Report foi desenvolvido em conjunto com a instrutura Juliana Mascarenha durante a apresentação do desafio. Entretanto, foram realizadas algumas alterações em relação ao conteúdo apresentado pela instrutora.
-- Foi retirada a seta de mudança de pagina e incluídos ícones caracterizando as demais paginas.
-
+ - Imagem do modelo relacional fornecido
 <div aling="center">
- <img src="https://github.com/Sanderfn/PowerBIAnalyst-Projeto1/blob/main/Paineis/Imagem%201%20-%20Sales%20Report.png">
-</div>>
-
-No Painel 1 - Sales Report, são apresentados 5 cartões e 4 gráficos com dados consolidado de acordo com o período selecionados, apresentando os seguintes indicadores.
-- Cartões:
-    - Total de vendas: Somatório dos valores liquidos das vendas.
-    - Total de unidades Vendidas: Somatório da quantidade de unidades vendidas.
-    - Valor total de descontos: Somatório dos valores concedidos como descontos.
-    - Lucro total: Somatório do lucro de cada venda realizada.
-    - Custo total das vendas: Somatório do custo de cada venda realizada.
-- Gráficos:
-    - Total das vendas por mês: Apresenta o valor total das vendas realizadas em seus respectivos meses dos ano, de acordo com o intervalo de data selecionado.
-    - Vendas por segmento: Apresenta o valor total das vendas realizadas conforme o segmento de mercado de atendimento de acordo com o intervalo de data selecionado. Este gráfico apresenta 2 visuais para a mesma informação sendo disponibilizado um gráfico de Bar chart ou um Pie chart, que são alternados pela seleção dos botões.
-    - Vendas por produto: Apresenta o valor total das vendas realizadas por produto comercializado de acordo com o intervalo de data selecionado.
-    - Vendas por país: Apresenta o valor total das vendas realizadas em cada país de atendimento de acordo com o intervalo de data selecionado. Este gráfico apresenta 2 visuais para a mesma informação sendo disponibilizado um gráfico de map chart ou um Treemap chart, que são alternados pela seleção dos botões.
-
-Foram utilizados 3 icones para navegação nas paginas do relatório.
-
-- O ícone <img src="https://github.com/Sanderfn/PowerBIAnalyst-Projeto1/blob/main/Icones/lucro.jpg" width="20"/> disponivel na barra lateral das paginas Sales Report e Product Report direciona o usuário para a pagina de **Profit Report**.
-
-- O ícone <img src="https://github.com/Sanderfn/PowerBIAnalyst-Projeto1/blob/main/Icones/vendas.png" width="20"/> disponivel na barra lateral das paginas Sales Report e Profit Report direciona o usuário para a pagina de **Product Report**.
-
-- Já o ícone <img src="https://github.com/Sanderfn/PowerBIAnalyst-Projeto1/blob/main/Icones/Acordo%20fechado.png" width="20"/> disponivel na barra lateral das paginas Profit Report e Product Report direciona o usuário para a pagina de **Sales Report**.
-
-## Painel 2 - Profit Report
-
-O Painel Profit Report foi desenvolvido a partir do modelo apresentado. Entretanto, toda a estrutura de análise dos dados e formatação dos gráficos foram deixadas para o aluno desenvolver como parte do desafio.
-
-O relatório Profit Report tem por finalidade detalhar o lucro obtido por meio das operações de comercialização dos produtos demonstrando os resultados por produto, país, segmento e ano das operações.
-
-<div aling="center">
-<img src="https://github.com/Sanderfn/PowerBIAnalyst-Projeto1/blob/main/Paineis/Imagem%202%20-%20Profit%20Report.png">
+ <img src="https://github.com/FredericoSander/Power-BI/blob/main/Criando%20um%20Star%20Schema/Imagens/Modelo%20de%20refer%C3%AAncia.png">
 </div>
 
-No Painel 2 - Profit Report, são apresentados 4 gráficos com dados consolidado que pode ter seu intervalo de análise modificado por ano de exercício, apresentando os seguintes indicadores.
+## Modelo Star Schema 
 
-- Gráficos:
-    - Distribuição do lucro por ano e país: Este gráfico de árvore hierárquica apresenta o valor da soma do lucro detalhando sequencialmente a fração do lucro correspondente a cada ano da base de dados e descrevendo o lucro auferido em cada país no ano selecionado.
-    - Lucro por produto: Este gráfico de radar apresenta o valor do lucro auferido para com cada produto do protifólio em cada respectivo ano. 
-    - Lucro por segmento: Este gráfico de barras clusterizados apresenta o valor do lucro auferido em cada segmento de atuação para cada ano selecionado.
-    - Distribuição do lucro por trimestre: Este gráfico de cascata apresenta a distribuição do lucro por trimestre e o acumulado anual. 
--Filtro:
-    - Ano: Este filtro tem por finalidade limitar o período de análise por ano.
-      
-## Painel 3 - Product Report
+ O modelo Star Schema, trata-se um modelo maduro e amplamente utilizado por Data Warehouses relacionais. Ele requer que os modeladores classifiquem suas tabelas de modelo como dimensão ou fato.
 
-O Painel Product Report foi desenvolvido a partir do conhecimento desenvolvido durante os cursos apresentados e entre outras referencias consultadas, com o proposito de desenvolver novas habilidades de capacidade de analitica indispensáveis ao mercado de trabalho. Foi utilizado como base o mesmo Layout e gráficos construidos anteriormente que se mostraram coerentes ao proposito da apresentação. 
+ **Tabelas dimensões**: Nessa tabela são descritos as entidades de negocio, essas entidades podem incluir produtos, pessoas, locais e conceitos, incluindo o próprio tempo. A tabela mais consistente que existirá neste modelo é a tabela Data. Uma tabela Dimensão contém uma ou mais colunas de chaves, que atua como identificadores exclusivos e colunas descritivas.
 
+ **Tabelas Fatos**: Nessa tabela são armazenados os eventos ou observações que podem ser ordens de vendas, saldos de ações, taxas de câmbio, temperaturas, etc. Uma tabela contém colunas chaves de dimensão relacionadas as tabelas de dimensões e colunas de medidas númericas. As colunas de chave de dimensão determinam a dimensionalidade de uma tabela de fatos, enquento os valores de chave de dimensão determinam a granularidade da tabela fatos. As tabelas fatos diferente mente das tabela de dimensão possuem um numero relativamente grande de linhas que crescem ao longo do tempo.
+
+
+ - Imagem do modelo Star Schema desenvolvido
 <div aling="center">
-<img src="https://github.com/Sanderfn/PowerBIAnalyst-Projeto1/blob/main/Paineis/Imagem%203%20-%20Product%20Report.png">
+ <img src="https://github.com/FredericoSander/Power-BI/blob/main/Criando%20um%20Star%20Schema/Imagens/Modelo%20StarSchema.png">
 </div>
 
-No Painel 3 - Product Report, são apresentados 4 gráficos com dados consolidado que pode ter seu intervalo de análise modificado por ano de exercício. Os gráficos apresentam os resultados para cada produto descrito na base de dados detalhando seu desempenho de vendas por país, segmento, trimestre a acumulado do ano. Os gráficos deste relatório possuem os títulos dinâmicos que se adequam a cenário análisado. Neste relatório são apresentados os seguintes indicadores.
+### Tabelas Fato
 
-- Gráficos:
-    - Distribuição do produto por país e segmento: Este gráfico de árvore hierárquica apresenta o valor da soma das unidades vendidas detalhando sequencialmente a fração das unidades correspondente a cada país da venda e descrevendo a quantidade de venda por segmento no país selecionado.
-    - Lucro unitário do produto por país: Este gráfico de barras apresenta o valor do lucro unitário auferido para com cada produto do protifólio em cada pais de comercialização e no respectivo ano de referencia. 
-    - Percentual de desconto do produto por país: Este gráfico de barras clusterizados apresenta o percentual de desconto que foram concedidos em cada país para o produto e o ano selecionado.
-    - Quantidade de unidades vendidas: Este gráfico de cascata apresenta a distribuição da unidade do produto vendidas por trimestre e o acumulado anual das vendas. 
-- Filtros:
-    - Ano de referência: Este filtro tem por finalidade limitar o período de análise em um ano.
-    - Descrição do produto: Este filtro tem por finalidade limita a análise a apenas um produto por vez, permitindo a analise do desempenho deste produto nos diferentes países e mercado de comercialização.
+**Tabela F_Teacher**: 
+A tabela F_Teacher é a tabela fato, onde serão cadastradas as informações relacionadas aos professores. Nela,são cadastrados os cursos mininstrados pelos professores, bem como as datas de inicio e termino de cursos e disciplinas associados. Essas informações são vinculadas através de chaves estrangeiras que realacionam  com as chaves  primárias por meio das tabelas de dimensão. A tabela F-Teacher possui um relacionamento de **um para muitos** com todas as tabela dimensão, refletindo o vinculo entre professores as atividade ao longo do tempo. Esta tabela apresenta um crescimento temporal a partir do cadastro de novas atividades.
+
+### Tabelas Dimensão
+
+**Tabela D_Teacher**: A Tabela D_Teacher trata-se de uma tabela dimensão que será utilizada para o cadastro dos professores. Dentre as informações cadastradas estão:
+
+- **Name**: Nesta coluna são armazenadas as informações do nome dos professores.
+- **Last_Name**: Nesta coluna são armazenadas as informações do último nome dos professores.
+- **CPF**: Nesta coluna são armazenados as informações de CPF dos professores cadastrados.
+- **Phone_Number**: Nesta coluna são armazenados as informações do número de telefone que seram utilizados para contato.
+- **E-mail**:  Nesta coluna são armazenados as informações de e-mail que seram utilizados para contato com os professores.
+
+Esta tabela é destinada a armazenar as informações básicas, servindo de base para consultas com foco nos professores da instituição.
+
+**Tabela D_Course**: A Tabela D_Course trata-se de uma tabela dimensão que será utilizada para o cadastro dos cursos. Dentre as informações cadastradas estão:
+
+- **Cod**: Esta coluna é destinada ao armazenamento do código do curso que deve ser exclusivo para cada curso. Embora este código possa ser utilizado como chave primária devido a sua exclusividade, o mesmo é utilizado apenas para consultas.
+- **Name**: Esta coluna é destinada ao armazenamento do nome dos cursos.
+- **Syllabus**: Esta coluna é destinada ao armazenamento das informações do conteúdo programático.
+- **WorkLoad**: Nesta coluna são armazenadas informações da carga horária de cada curso.
+- **Credits**:  Nesta coluna são armazenadas informações os créditos de cada curso.
+- **Create_Date**: Esta coluna é destinada ao armazenamento da data de criação dos cursos.
+- **Shutdown_Date**:  Esta coluna é destinada ao armazenamento da data de encerramento dos cursos.
+
+ Esta tabela é destinada a armazenar as informações básicas dos cursos, servindo de base para consultas com foco nos cursos da instituição. 
+
+**Tabela D_Departament**: A Tabela D_Departament trata-se de uma tabela dimensão que será utilizada para o cadastro dos despartamentos da isntituição. Dentre as informações cadastradas estão:
+
+- **Cod_Departament**: Esta coluna é destinada ao armazenamento do código dos departamentos que deve ser exclusivo para cada disciplina. Embora possa ser utilizado como chave primária devido a sua exclusividade, o mesmo é utilizado apenas para consultas.
+- **Name**: Esta coluna é destinada ao armazenamento do nome dos departamentos da isntituição.
+- **Description**: Esta coluna é destinada ao armazenamento das informações referente as atividades do departamento.
+- **Create_Date**: Esta coluna é destinada ao armazenamento da data de criação dos departamentos.
+- **Shutdown_Date**:  Esta coluna é destinada ao armazenamento da data de fechamento dos departamentos.
+
+ Esta tabela é destinada a armazenar as informações básicas do departamentos, servindo de base para consultas com foco nos departamento da instituição. 
+
+**Tabela D_Discipline**: A Tabela 
+
+- **Cod_Discipline**: Esta coluna é destinada ao armazenamento do código das disciplinas que deve ser exclusivo para cada disciplina. Embora possa ser utilizado como chave primária devido a sua exclusividade, o mesmo é utilizado apenas para consultas.
+- **Name**: Esta coluna é destinada ao armazenamento do nome das disciplinas.
+- **Syllabus**: Esta coluna é destinada ao armazenamento das informações do conteúdo programático das disciplinas.
+- **WorkLoad**: Nesta coluna são armazenadas informações da carga horária de cada disciplina.
+- **Credits**:  Nesta coluna são armazenadas os créditos de cada disciplina cadastrada.
+- **Create_Date**: Esta coluna é destinada ao armazenamento da data de criação das disciplinas.
+- **Shutdown_Date**:  Esta coluna é destinada ao armazenamento da data de encerramento das disciplinas.
+
+Esta tabela é destinada a armazenar as informações básicas das disciplinas, servindo de base para consultas com foco nas disciplinas da instituição. 
+
+
+## Autor
+
+- [Frederico S N Cota](https://github.com/Sanderfn)
