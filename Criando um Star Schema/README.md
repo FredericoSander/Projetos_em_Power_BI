@@ -4,8 +4,10 @@
 <p align="justify"> 
 Este desafio de projeto teve como objetivo o desenvolver habilidades de criação de modelos Star Schema, essenciais para melhorar o desempenho no Power Bi. O Power BI oferece uma performance otimizada ao trabalhar com dados modelados neste formato. Para a criação do modelo Star Schema, foi fornecido um modelo de banco de dados relacional para servir de referência para adequações necessarias a estrutura final.
 </p>
+
 ## Modelo relacional
-<p align="justify"> 
+<p align="justify">
+ 
  O **modelo de dados relacional** é amplamente utilizado na atualidade, sendo um dos mais populares dentre os diversos modelos existentes. Ele oferece uma maneira intuitiva e direta de representar os dados em tabelas. Em um modelo relacional cada linha em uma tabela é um registro com uma ID exclusiva (Chave Primária). As tabela, por sua vez, são compostas por colunas  que armazenam os atributos dos dados persistidos.
  O modelo de relacional é empregado por organizaões de diversos portes e segmentos, atendendo a uma vasta gama de aplicações, desde o controle de vendas diarias de grandes redes até a gestão de processos operacionais de produção. Os banco de dados relacionais ideais para cenários em que os dados precisam se relacionar e ser gerenciados de forma segura e consistente, com base em regras definidas.
 </p>
@@ -17,6 +19,7 @@ Este desafio de projeto teve como objetivo o desenvolver habilidades de criaçã
 
 ## Modelo Star Schema 
 <p align="justify"> 
+ 
  O modelo Star Schema, trata-se um modelo maduro e amplamente utilizado por Data Warehouses relacionais. Ele requer que os modeladores classifiquem suas tabelas de modelo como dimensão ou fato.
 
  **Tabelas dimensões**: Nessa tabela são descritos as entidades de negocio, essas entidades podem incluir produtos, pessoas, locais e conceitos, incluindo o próprio tempo. A tabela mais consistente que existirá neste modelo é a tabela Data. Uma tabela Dimensão contém uma ou mais colunas de chaves, que atua como identificadores exclusivos e colunas descritivas.
@@ -31,8 +34,8 @@ Este desafio de projeto teve como objetivo o desenvolver habilidades de criaçã
 
 ### Tabelas Fato
 <p align="justify"> 
-**Tabela F_Teacher**: 
-A tabela F_Teacher é a tabela fato, onde serão cadastradas as informações relacionadas aos professores. Nela, são cadastrados os cursos mininstrados pelos professores, bem como as datas de inicio e termino de cursos e disciplinas associados. Essas informações são vinculadas através de chaves estrangeiras que realacionam  com as chaves  primárias por meio das tabelas de dimensão. A tabela F-Teacher possui um relacionamento de **um para muitos** com todas as tabela dimensão, refletindo o vinculo entre professores as atividade ao longo do tempo. Esta tabela apresenta um crescimento temporal a partir do cadastro de novas atividades.
+ 
+**Tabela F_Teacher**: A tabela F_Teacher é a tabela fato, onde serão cadastradas as informações relacionadas aos professores. Nela, são cadastrados os cursos mininstrados pelos professores, bem como as datas de inicio e termino de cursos e disciplinas associados. Essas informações são vinculadas através de chaves estrangeiras que realacionam  com as chaves  primárias por meio das tabelas de dimensão. A tabela F-Teacher possui um relacionamento de **um para muitos** com todas as tabela dimensão, refletindo o vinculo entre professores as atividade ao longo do tempo. Esta tabela apresenta um crescimento temporal a partir do cadastro de novas atividades.
 
 ### Tabelas Dimensão
 
