@@ -1,5 +1,18 @@
 # Criando um relatório de venda elegante com Power BI
 
+## Índice 
+
+* [Criando um relatório de venda elegante com Power BI](#criando-um-relatório-de-venda-elegante-com-power-bi)
+* [Índice](#índice)
+* [Descrição do Projeto](#descrição-do-projeto)
+* [Painel 1 - Sales Report](#painel-1---sales-report)
+* [Painel 2 - Profit Report](#painel-2---profit-report)
+* [Painel 3 - Product Report](#painel-3---product-report)
+* [Status do Projeto](#status-do-projeto)
+* [Acesse o Projeto](#acesse-o-projeto)
+
+## Descrição do Projeto
+
 Neste desafio de projeto, foi criado um relatório em Power Bi com 3 páginas para apresentar os resultados das vendas de uma empresa fictícia realizadas entre setembro de 2013 e dezembro de 2014. Nesta base de dados, são apresentadas as seguintes informações:
 - Segmento de vendas.
 - País das vendas.
@@ -95,3 +108,16 @@ No Painel 3 - Product Report, são apresentados 4 gráficos com dados consolidad
 - Filtros:
     - Ano de referência: Este filtro tem por finalidade limitar o período de análise em um ano.
     - Descrição do produto: Este filtro tem por finalidade limita a análise a apenas um produto por vez, permitindo a analise do desempenho deste produto nos diferentes países e mercado de comercialização.
+
+## Status do Projeto
+
+![Status do Projeto](http://img.shields.io/static/v1?label=STATUS&message=Concluído&color=GREEN&style=for-the-badge)
+
+## Acesse o Projeto
+
+Você pode acessar o projeto clicando [aqui](hthttps://github.com/FredericoSander/Projetos_em_Power_BI/tree/main/Criando%20um%20relat%C3%B3rio%20de%20vendas%20elegante/Projeto), e interaja com o [relatório](https://bit.ly/DesafiodeProjetoDIO)
+
+## Autor    
+
+| [<img loading="lazy" src="https://avatars.githubusercontent.com/u/136928502?s=96&v=4" width=115><br><sub>Frederico Sander</sub>](https://github.com/FredericoSander)
+| :---: | 
