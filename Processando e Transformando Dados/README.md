@@ -1,190 +1,144 @@
-# Limpeza e transformação dos dados com POWER BI
+# Processando e Transformando Dados com Power BI
+
+## Índice 
+
+* [Processando e Transformando Dados com Power BI](#processando-e-transformando-dados-com-power-bi)
+* [Índice](#índice)
+* [Descrição do Projeto](#descrição-do-projeto)
+* [Criação do banco de dados na Azure](#criação-do-banco-de-dados-na-azure)
+* [Criação das tabelas](#criação-das-tabelas)
+* [Relacionamentos](#relacionamentos)
+* [Técnicas e tecnologias utilizadas](#técnicas-e-tecnologias-utilizadas)
+* [Conclusão](#conclusão)
+* [Status do Projeto](#status-do-projeto)
+* [Acesse o Projeto](#acesse-o-projeto)
 
 
-## Descrição do projeto
- O projeto consiste na criação de uma instância Azure para MySQL, na qual posteriormente será criado um banco de dados denomidado Azure_Company, utilizando para isso os scripts disponibilizado no repositório da [Juliana Zanellatto - power bi analyst - Módulo 3 Desafio de projeto](https://github.com/julianazanelatto/power_bi_analyst/tree/main/M%C3%B3dulo%203/Desafio%20de%20Projeto) . Após a criação do banco de dados deve-se realizar a persistência dos dados e integrar o banco Azure Company com o Power Bi para realizar a transformação dos dados.
+## Descrição do Projeto
+O projeto consiste na criação de uma instância MySQL na plataforma Azure, onde foi configurado o banco de dados denominado **Azure_Company**. A partir da criação desse banco de dados, dados como informações de funcionários, departamentos e projetos foram inseridos no banco. Posteriormente, esses dados foram integrados ao Power BI através da conexão com o banco de dados MySQL. Durante o processo de integração, foi realizada uma seleção cuidadosa das tabelas a serem carregadas, seguidos por ajustes nos tipos de dados e aplicação de filtros para garantir que as informações fossem apresentadas de forma clara e consistente no relatório final. Os scripts utilizados para essa etapa estão disponíveis nos seguintes links:
 
- Os scripts de criação do banco de dados e inserção de dados estão disponíveis nos link a seguir: [Script de criação do banco de dados](bit.ly/3wPG4JH) e [Script de dados para ser persistido](https://github.com/Sanderfn/PythonDataAnalytics-Processando-e-Tranformando-Dados-com-Power-BI/blob/main/Script%20SQL/insercao_de_dados_e_queries_sql.sql).
+- [Script de Criação do Banco de Dados](bit.ly/3wPG4JH): Este script cria todas as tabelas necessárias no banco de dados **Azure_Company**, incluindo tabelas de funcionários, departamentos e projetos, além de definir suas chaves primárias e estrangeiras.
+- [Script de Inserção de Dados](https://github.com/Sanderfn/PythonDataAnalytics-Processando-e-Tranformando-Dados-com-Power-BI/blob/main/Script%20SQL/insercao_de_dados_e_queries_sql.sql)
 
-A etapa de transformação dos dados tem como objetivo atender as seguintes premissas:
-- Analisar os cabeçalhos e tipos de dados.
-- Modificar os valores monetários para o tipo double preciso.
-- Verificar a existência dos nulos e analisar a remoção.
-- Verificar se há algum colaborador sem gerente.
-- Verificar se há algum departamento sem gerente. 
-- Verificar o número de horas dos projetos.
-- Separar as colunas complexas.
-- Mesclar consultas employee e departament para criar uma tabela employee com o nome dos departamentos associados aos colaboradores. 
-- Eliminar as colunas desnecessárias.
-- Realizar a junção dos colaboradores e respectivos nomes dos gerentes. Isso pode ser feito com consulta SQL ou pela mescla de tabelas com Power BI. 
-- Mesclar as colunas de Nome e Sobrenome para ter apenas uma coluna definindo os nomes dos colaboradores.
-- Mesclar os nomes de departamentos e localização.
-- Explicar por que, neste caso supracitado, podemos apenas utilizar o mesclar e não o atribuir. 
-- Agrupar os dados a fim de saber quantos colaboradores existem por gerente.
-- Eliminar as colunas desnecessárias, que não serão usadas no relatório, de cada tabela.
+A etapa de transformação dos dados teve como objetivo atender as seguintes premissas:
+- Análise de cabeçalhos e tipos de dados.
+- Modificação de valores monetários para o tipo **double**.
+- Verificação de dados nulos e tratamento de remoção.
+- Análise de colaboradores sem gerente e departamentos sem gerente.
+- Ajuste nas colunas de horas de projeto.
+- Mescla de tabelas e colunas complexas.
+- Criação de tabelas derivadas, como **Employee-Manager** e **Employee_Departament**.
+- Exclusão de colunas desnecessárias.
 
-O relatório em Power Bi pode ser visualizado por meio link: [Company report](https://app.powerbi.com/view?r=eyJrIjoiMTdkYTVlZDItODZlYy00YTg1LTg4YjUtODgxYWFkOTJhM2JlIiwidCI6IjMxMTU3MGI0LTFhYmMtNGRmZS05NjgzLTFlNGQ4ZDZmOGExNiJ9).
+O relatório final em Power BI pode ser acessado pelo seguinte link: [Company Report](https://app.powerbi.com/view?r=eyJrIjoiMTdkYTVlZDItODZlYy00YTg1LTg4YjUtODgxYWFkOTJhM2JlIiwidCI6IjMxMTU3MGI0LTFhYmMtNGRmZS05NjgzLTFlNGQ4ZDZmOGExNiJ9).
 
-## Banco de dados Azure_Company
+---
 
-A criação da instância do MySQL na Azure, configuração do banco de dados persistência dos dados e integração do Power BI com a Nuvem foi realizada conforme o tutorial de apresentação do projeto.
+## Criação do banco de dados na Azure
 
-- Imagem do banco de dados configurado na Azure"
-<div aling="center">
- <img src="https://github.com/Sanderfn/PythonDataAnalytics-Processando-e-Tranformando-Dados-com-Power-BI/blob/main/Imagens/Imagem.%20BD%20Azure.png">
+A criação da instância MySQL na Azure, a configuração do banco de dados, a persistência de dados e a integração com o Power BI foram realizadas conforme o tutorial de apresentação do projeto. Abaixo estão as imagens que ilustram essas etapas:
+
+- **Imagem do banco de dados configurado na Azure**
+  <div align="center">
+    <img src="https://github.com/Sanderfn/PythonDataAnalytics-Processando-e-Tranformando-Dados-com-Power-BI/blob/main/Imagens/Imagem.%20BD%20Azure.png">
+  </div>
+
+- **Imagem da seleção do tipo de conexão do banco de dados com o Power BI**
+  <div align="center">
+    <img src="https://github.com/Sanderfn/PythonDataAnalytics-Processando-e-Tranformando-Dados-com-Power-BI/blob/main/Imagens/Sele%C3%A7%C3%A3o%20do%20banco%20de%20dados.png">
+  </div>
+
+- **Imagem da configuração do banco de dados no Power BI**
+  <div align="center">
+    <img src="https://github.com/Sanderfn/PythonDataAnalytics-Processando-e-Tranformando-Dados-com-Power-BI/blob/main/Imagens/Acesso%20ao%20servidor.png">
+  </div>
+
+- **Imagem do carregamento das tabelas do banco de dados Azure_Company**
+  <div align="center">
+    <img src="https://github.com/Sanderfn/PythonDataAnalytics-Processando-e-Tranformando-Dados-com-Power-BI/blob/main/Imagens/Carregamento%20de%20tabelas.png">
+  </div>
+
+---
+
+## Detalhamento das Tabelas e Ações de Tratamento
+
+### Tabela Department
+
+| Ação               | Descrição                                                                                 |
+|----------------------|---------------------------------------------------------------------------------------------|
+| Renomear Tabela      | O nome da tabela foi alterado para **department**.                                            |
+| Exclusão de Colunas  | Colunas desnecessárias foram excluídas, como **dept_locations** e **project**.              |
+| Mesclar Tabelas      | A coluna **Dlocations** foi mesclada à tabela **department**.                                 |
+| Renomear Colunas     | A coluna **Dlocation** foi renomeada para **Department Location**.                            |
+| Mesclar Colunas      | As colunas **Dname** e **Dlocations** foram combinadas.                                       |
+
+O propósito da tabela **Department** é armazenar informações sobre os departamentos da empresa, incluindo seu nome, localidade e gerente responsável. Essa tabela está relacionada à tabela **Employee**, permitindo que se identifique os funcionários que fazem parte de cada departamento e quais departamentos estão atualmente sem gerente atribuído. Essa relação é crucial para análises que envolvem a estrutura organizacional e a gestão de recursos humanos.
+
+Imagem da tabela Department:
+<div align="center">
+  <img src="https://github.com/Sanderfn/PythonDataAnalytics-Processando-e-Tranformando-Dados-com-Power-BI/blob/main/Imagens/Departament.png">
 </div>
 
-- Imagem da seleção do tipo de conexão do banco de dados com o Power BI
-<div aling="center">
- <img src="https://github.com/Sanderfn/PythonDataAnalytics-Processando-e-Tranformando-Dados-com-Power-BI/blob/main/Imagens/Sele%C3%A7%C3%A3o%20do%20banco%20de%20dados.png">
+### Tabela Employee
+
+| Ação                  | Descrição                                                                 |
+|-----------------------|-----------------------------------------------------------------|
+| Renomear Tabela       | Alterado para **employee**.                                      |
+| Exclusão de Colunas   | Colunas como **Super_ssn** foram removidas.                     |
+| Separação de Colunas | Endereços foram divididos em **Number_Address**, **Address** e **State**. |
+| Junção de Nomes      | Colunas **F.name** e **L.name** foram combinadas em **E.name**. |
+
+Imagem da tabela Employee:
+<div align="center">
+  <img src="https://github.com/Sanderfn/PythonDataAnalytics-Processando-e-Tranformando-Dados-com-Power-BI/blob/main/Imagens/Employee.png">
 </div>
 
-- Imagem da configuração do banco de dados no Power BI
-<div aling="center">
- <img src="https://github.com/Sanderfn/PythonDataAnalytics-Processando-e-Tranformando-Dados-com-Power-BI/blob/main/Imagens/Acesso%20ao%20servidor.png">
-</div>
- 
-- Imagem do carregamento das tabelas do banco de dados Azure_Company
-<div aling="center">
- <img src="https://github.com/Sanderfn/PythonDataAnalytics-Processando-e-Tranformando-Dados-com-Power-BI/blob/main/Imagens/Carregamento%20de%20tabelas.png">
-</div>
+### Tabela Employee-Manager
 
+| Ação                | Descrição                                          |
+|---------------------|--------------------------------------------------|
+| Criação de Tabela | Criada a partir da consulta **employee** duplicada. |
+| Exclusão de Colunas | Apenas as colunas **E.name** e **N.manager** foram mantidas. |
 
-## Tabela Departament
-
-Relação de Ações de tratamento de dados
-|Ação|Descrição|
-|----|----------------|
-|Renomear tabela|Foi alterado o nome da tabela de azure_company departament para departament|
-|Exclusão de colunas|Foi realizada a exclusão das colunas azure_company.dept_loactions, azure_company.employee,azure_company.project|
-|Mesclar tabelas|Foi realizada a inclusão da coluna Dlocations da tabela Dept_locations|
-|Renomear colunas|Foi realizada a alteração do nome da coluna azure_company dept_locations.Dlocation para D.location
-|Mesclar Colunas| Foi realizada a união das colunas Dname com a coluna D.locations gerando uma no coluna|
-|Inserir localização do departamento| Foi utilizado a mescla de consultas para associar a cada departamento da consulta departament a localização existente na tabela dept.location. Neste caso foi utilizado a mescla de colunas devido a necessidade de combinar as informações que contemplem o departamento e a localização em uma unica estrutura. Ainda neste cenário não se deve utilizar a ação atribuir de colunas, pois isso apenas adicionar uma nova coluna que deve ser baseada em um cálculo ou experssão DAX. |
-| Exclusão de colunas| Exclusão da coluna locations que não será utilizada nos relatórios.|
-
-
-- Imagem da tabela departament banco de dados Azure_Company
-<div aling="center">
- <img src="https://github.com/Sanderfn/PythonDataAnalytics-Processando-e-Tranformando-Dados-com-Power-BI/blob/main/Imagens/Departament.png">
+Imagem da tabela Employee-Manager:
+<div align="center">
+  <img src="https://github.com/Sanderfn/PythonDataAnalytics-Processando-e-Tranformando-Dados-com-Power-BI/blob/main/Imagens/Employee_manager.png">
 </div>
 
-## Tabela Departament locations
+---
 
-Relação de Ações de tratamento de dados
-|Ação|Descrição|
-|----|----------------|
-|Renomear tabela|Foi alterado o nome da tabela de azure_company dept_locations para dept_locations|
-|Remover colunas|Foi realizada a exclusão da coluna azure_company.departament|
+## Criação dos Relacionamentos entre Tabelas
 
-- Imagem da tabela Departament location do banco de dados Azure_Company
-<div aling="center">
- <img src="https://github.com/Sanderfn/PythonDataAnalytics-Processando-e-Tranformando-Dados-com-Power-BI/blob/main/Imagens/Departament%20Location.png">
+Após o tratamento dos dados, foram criados os relacionamentos entre as tabelas para possibilitar análises detalhadas no Power BI. Por exemplo, ao relacionar as tabelas **Employee** e **Department**, é possível calcular o total de colaboradores por departamento, identificar quais departamentos estão sem gerente atribuído e monitorar a alocação de funcionários em projetos específicos. Essa análise pode auxiliar a empresa a melhorar sua gestão de recursos humanos e alocar pessoal de maneira mais eficiente. Esses relacionamentos são fundamentais para garantir a integridade dos dados e facilitar as consultas e relatórios.
+
+Imagem dos Relacionamentos:
+<div align="center">
+  <img src="https://github.com/Sanderfn/PythonDataAnalytics-Processando-e-Tranformando-Dados-com-Power-BI/blob/main/Imagens/Relacionamento.png">
 </div>
 
-## Tabela Dependent
+---
 
-Relação de Ações de tratamento de dados
-|Ação|Descrição|
-|----|----------------|
-|Renomear tabela|Foi alterado o nome da tabela de azure_company dependent para dependent|
-|Exclusão de coluna|Foi realizada a exclusão da coluna azure_company.employee|
+## Técnicas e tecnologias utilizadas
 
-- Imagem da tabela Dependent do banco de dados Azure_Company
-<div aling="center">
- <img src="https://github.com/Sanderfn/PythonDataAnalytics-Processando-e-Tranformando-Dados-com-Power-BI/blob/main/Imagens/Dependent.png">
-</div>
+- ``SQL``
+- ``MySQL WorkBench 8.0``
+- ``Azure``
+- ``Power BI``
+- ``Git``
+- ``GitHub``
 
-## Tabela Employee
+## Considerações Finais
+Este projeto demonstrou como integrar um banco de dados MySQL hospedado na Azure ao Power BI e aplicar transformações essenciais para criar relatórios eficazes. Durante o processo, enfrentamos desafios como inconsistências nos dados importados e a necessidade de tratar valores ausentes e formatos de dados inadequados. Esses desafios foram superados por meio de etapas de limpeza, conversão de tipos e criação de tabelas derivadas para garantir a integridade e qualidade das análises realizadas. A etapa de transformação de dados abordou boas práticas de renomeação, mescla e remoção de colunas desnecessárias, garantindo um dataset limpo e eficiente para análise.
 
-O colaborador James Borg não possui um gerente. Este indica que o colaborador James Borg trata-se do Gerente Geral ou diretor na Azure_Company.
+## Status do Projeto
 
-Relação de Ações de tratamento de dados
-|Ação|Descrição|
-|----|----------------|
-|Renomear tabela|Foi alterado o nome da tabela azure_company employee para employee|
-|Exclusão de coluna|Foi realizada a exclusão das colunas azure_company.departament, azure_company.employee(Ssn), azure_company.employee(Super_ssn),azure_company.works_on|
-|Separa colunas complexas| Foi realizada a divisão da coluna Address em outras três colunas que irão abrigar o Number_Address, Address e state|
-|Junção de nomes|Foi mesclado o F.name e o L.name dos colaboradores para cria um unico nome do colaborador denomidado E.name|
-|Junção de colaboradores e gerentes|Foi realizada uma meslca na consulta employee para associar a cada colaborador o nome de seu respectivo gerente|
- 
- - Imagem da tabela Employee do banco de dados Azure_Company
-<div aling="center">
- <img src="https://github.com/Sanderfn/PythonDataAnalytics-Processando-e-Tranformando-Dados-com-Power-BI/blob/main/Imagens/Employee.png">
-</div>
+![Status do Projeto](http://img.shields.io/static/v1?label=STATUS&message=Concluído&color=GREEN&style=for-the-badge)
 
+## Acesse o Projeto
 
-## Tabela Project
+Você pode acessar o projeto clicando [aqui](https://github.com/FredericoSander/Construa-Banco-de-Dados-do-Zero-SQL/tree/main/Projeto)
 
-Relação de Ações de tratamento de dados
-|Ação|Descrição|
-|----|----------------|
-|Renomear tabela|Foi alterado o nome da tabela azure_company Project para Project|
-|Exclusão de coluna| Foi realizada a exclusão das colunas azure_company.departament, azure_company.works_on|
+## Autor    
 
-- Imagem da tabela Project do banco de dados Azure_Company
-<div aling="center">
- <img src="https://github.com/Sanderfn/PythonDataAnalytics-Processando-e-Tranformando-Dados-com-Power-BI/blob/main/Imagens/Project.png">
-</div>
-
-## Tabela Works_on
-
-Relação de Ações de tratamento de dados
-|Ação|Descrição|
-|----|----------------|
-|Renomear tabela|Foi alterado o nome da tabela azure_company Works_on para Works_on|
-|Exclusão de coluna|Foi realizada a exclusão das colunas azure_company.employeet, azure_company.Project|
-
-- Imagem da tabela Works_on do banco de dados Azure_Company
-<div aling="center">
- <img src="https://github.com/Sanderfn/PythonDataAnalytics-Processando-e-Tranformando-Dados-com-Power-BI/blob/main/Imagens/Works%20on.png">
-</div>
-
-## Tabela Employee-Manager
-
-Relação de Ações de tratamento de dados
-|Ação|Descrição|
-|----|----------------|
-|Criação da tabela Employee-Manager|A consulta employee foi duplicada para criar uma nova tabela denominada Employee-Manager.|
-|Exclusão de colunas|Todas as colunas da consulta Employee-manager foram excluídas com excessão da colunas E.name e N.manager|
-
-- Imagem da tabela Employee-Manager banco de dados Azure_Company
-<div aling="center">
- <img src="https://github.com/Sanderfn/PythonDataAnalytics-Processando-e-Tranformando-Dados-com-Power-BI/blob/main/Imagens/Employee_manager.png">
-</div>
-
-## Tabela Employee_departament
-
-Relação de Ações de tratamento de dados
-|Ação|Descrição|
-|----|----------------|
-|Criação da tabela Employee_departament| A tabela foi criada a partir da mescla das consultas employee e departament, para relacionar o departamento aos colaboradores|
-|Exclusão de colunas| Foi realizada a exclusão de todas as colunas da tabela employee_departament, com exceção das colunas Fname, Lname, Ssn, departament.Dname e Dno|
-
-
-- Imagem da tabela Employee_departament do banco de dados Azure_Company
-<div aling="center">
- <img src="https://github.com/Sanderfn/PythonDataAnalytics-Processando-e-Tranformando-Dados-com-Power-BI/blob/main/Imagens/Employee_departament.png">
-</div>
-
-## Criação do relacionamentos entre tabelas
-
-Terminada a etapa de tratamento dos dados do banco de dados Azure-Company, foi relizada a etapa de criação de relacionamento entre as tabelas para possibilitar a elaboração de um relatório com as principais informações. Foi utilizado o modelo estrela na criação dos relacionametos
-
-- Imagem da estrutura de relacionamentos criada
-div aling="center">
- <img src="https://github.com/Sanderfn/PythonDataAnalytics-Processando-e-Tranformando-Dados-com-Power-BI/blob/main/Imagens/Relacionamento.png">
-</div>
-
-## Company Report
-
-Utilizando o banco de dados Azure_Company foi elaborado o Company report com a principais informações persistidas na base de dados. O Company report está disponível para interação por meio link [Company Report](https://app.powerbi.com/view?r=eyJrIjoiMTdkYTVlZDItODZlYy00YTg1LTg4YjUtODgxYWFkOTJhM2JlIiwidCI6IjMxMTU3MGI0LTFhYmMtNGRmZS05NjgzLTFlNGQ4ZDZmOGExNiJ9)
-
-- Imagem da tabela departament banco de dados Azure_Company
-<div aling="center">
- <img src="https://github.com/Sanderfn/PythonDataAnalytics-Processando-e-Tranformando-Dados-com-Power-BI/blob/main/Imagens/Company%20report.png">
-</div>
-
-## Autores
-
-- [Frederico S N Cota](https://github.com/Sanderfn)
+| [<img loading="lazy" src="https://avatars.githubusercontent.com/u/136928502?s=96&v=4" width=115><br><sub>Frederico Sander</sub>](https://github.com/FredericoSander)
+| :---: | 
